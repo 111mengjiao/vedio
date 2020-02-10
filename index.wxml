@@ -1,0 +1,14 @@
+<!-- 第一个区域：视频播放器 -->
+<video id="myVideo" src="{{src}}" controls ></video>
+<!-- 第二个区域：弹幕区域 -->
+<view class="danmuArea">
+      <input type="text" placeholder="请输入弹幕"></input>
+      <button>发送弹幕</button>
+</view>
+<!-- 第三个区域：视频列表 -->
+<view class="videoList">
+      <view class="videoBar" wx:for='{{list}}' wx:key='index' data-ulr='{{item.videoUrl}}' bindtap="playVideo">
+            <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1366282573,983251697&fm=26&gp=0.jpg"></image>
+            <text>{{item.title}}</text>
+</view>
+</view>
